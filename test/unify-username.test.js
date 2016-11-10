@@ -45,6 +45,24 @@ describe(
           }
         );
 
+        it(
+          'https://github.com/kriasoft/react-starter-kit', () => {
+            assert.equal(unifyUsername('https://github.com/kriasoft/react-starter-kit'), '@kriasoft');
+          }
+        );
+
+        it(
+          'https://github.com:80/kriasoft/react-starter-kit', () => {
+            assert.equal(unifyUsername('https://github.com:80/kriasoft/react-starter-kit'), '@kriasoft');
+          }
+        );
+
+        it(
+          'vk.com/durov', () => {
+            assert.equal(unifyUsername('vk.com/durov'), '@durov');
+          }
+        );
+
       }
     );
 
