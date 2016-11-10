@@ -1,0 +1,28 @@
+{
+  "name": "skillbranch-hode-react-2c",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ohar/SkillBranch-Node-React-2c.git"
+  },
+  "author": "Pavel Lysenko aka Ohar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ohar/SkillBranch-Node-React-2c/issues"
+  },
+  "homepage": "https://github.com/Ohar/SkillBranch-Node-React-2c#readme",
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "lodash": "^4.16.6",
+    "log4js": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
