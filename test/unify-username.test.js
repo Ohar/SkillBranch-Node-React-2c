@@ -63,6 +63,12 @@ describe(
           }
         );
 
+        it(
+          'http://www.vk.com/durov', () => {
+            assert.equal(unifyUsername('http://www.vk.com/durov'), '@durov');
+          }
+        );
+
       }
     );
 

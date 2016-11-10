@@ -7,10 +7,13 @@ const log4js = require('log4js'),
 function unifyUsername (username) {
   logger.trace('Start', username);
 
-  const unifiedUsername = last(
-    username
-      .split('?')[0]
-      .split('/')
+  const usernameWithoutQuery = username.split('?')[0],
+        hasDot               = /\./.test(usernameWithoutQuery);
+
+  const unifiedUsername = (
+    hasDot
+      ? last(usernameWithoutQuery.split('.')).split('/')[1]
+      : last(usernameWithoutQuery.split('/'))
   )
     .replace(/\W/g, '');
 
