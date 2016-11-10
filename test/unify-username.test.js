@@ -39,6 +39,12 @@ describe(
           }
         );
 
+        it(
+          '@@skillbranch', () => {
+            assert.equal(unifyUsername('@@skillbranch'), '@skillbranch');
+          }
+        );
+
       }
     );
 

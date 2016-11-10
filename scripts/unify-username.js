@@ -11,7 +11,8 @@ function unifyUsername (username) {
     username
       .split('?')[0]
       .split('/')
-  );
+  )
+    .replace(/\W/g, '');
 
   logger.trace('Done', unifiedUsername);
 
