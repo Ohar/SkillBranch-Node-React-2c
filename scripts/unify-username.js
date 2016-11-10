@@ -7,15 +7,16 @@ const log4js = require('log4js'),
 function unifyUsername (username) {
   logger.trace('Start', username);
 
-  const usernameWithoutQuery = username.split('?')[0],
-        hasDot               = /\./.test(usernameWithoutQuery);
+  const usernameWithoutQuery    = username.split('?')[0],
+        usernameWithoutProtocol = last(usernameWithoutQuery.split('//')),
+        hasSlash                = /\//.test(usernameWithoutProtocol);
 
   const unifiedUsername = (
-    hasDot
-      ? last(usernameWithoutQuery.split('.')).split('/')[1]
-      : last(usernameWithoutQuery.split('/'))
+    hasSlash
+      ? usernameWithoutProtocol.split('/')[1]
+      : usernameWithoutProtocol
   )
-    .replace(/\W/g, '');
+    .replace(/@/g, '');
 
   logger.trace('Done', unifiedUsername);
 

@@ -47,7 +47,7 @@ describe(
 
         it(
           '@@skill.branch', () => {
-            assert.equal(unifyUsername('@@skillbranch'), '@skill.branch');
+            assert.equal(unifyUsername('@@skill.branch'), '@skill.branch');
           }
         );
 
