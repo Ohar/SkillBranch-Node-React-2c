@@ -46,6 +46,12 @@ describe(
         );
 
         it(
+          '@@skill.branch', () => {
+            assert.equal(unifyUsername('@@skillbranch'), '@skill.branch');
+          }
+        );
+
+        it(
           'https://github.com/kriasoft/react-starter-kit', () => {
             assert.equal(unifyUsername('https://github.com/kriasoft/react-starter-kit'), '@kriasoft');
           }
@@ -66,6 +72,12 @@ describe(
         it(
           'http://www.vk.com/durov', () => {
             assert.equal(unifyUsername('http://www.vk.com/durov'), '@durov');
+          }
+        );
+
+        it(
+          'vk.com/pavel.durov', () => {
+            assert.equal(unifyUsername('vk.com/pavel.durov'), '@pavel.durov');
           }
         );
 
